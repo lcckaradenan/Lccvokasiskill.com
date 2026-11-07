@@ -1,0 +1,5219 @@
+/* HEADER */
+header{
+
+    grid-template-columns: auto 1fr;
+    
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    line-height:1.6;
+}
+
+/* LOGO */
+.logo{
+    width: 80px;
+    height: auto;
+}
+
+/* MENU */
+
+/* LINK MENU */
+nav a{
+
+    position: relative;
+}
+
+/* Garis bawah saat hover */
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+/* ================= LOGO ================= */
+
+.logo,
+.logo2{
+
+    object-fit:cover;      /* Logo memenuhi area border */
+    border-radius:20px;
+    border:2px solid #ffffff;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    display:block;
+    box-sizing:border-box;
+}
+
+.hero{
+    text-align:center;
+    background:linear-gradient(135deg,#7DA0CA,#D6E6F2);
+    color:rgb(4, 4, 4);
+}
+
+.card:hover{
+    
+    transition:0.3s;
+}
+
+input,button{
+    padding:10px;
+    margin:5px;
+}
+
+button{
+    background:#80aad3;
+    color:rgb(255, 255, 255);
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#5b86b6;
+}
+
+.gallery img{
+    width:180px;
+    height:120px;
+    object-fit:cover;
+    border-radius:8px;
+    margin:8px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+#home,
+#profile,
+#pelatihan,
+#register,
+#account,
+#gallery,
+#ulasan,
+#contact{
+    scroll-margin-top:90px;
+}
+
+.progress{
+
+width:100%;
+height:25px;
+background:#ddd;
+border-radius:30px;
+margin-bottom:20px;
+overflow:hidden;
+
+}
+
+.progress-bar{
+
+height:100%;
+color:white;
+text-align:center;
+line-height:25px;
+font-weight:bold;
+
+}
+
+.input-box,
+.input-box input{
+    width:100%;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.login-box{
+    width:380px;
+    margin:50px auto;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.login-box h2{
+    text-align:center;
+    color:#2C5E92;
+    margin-bottom:8px;
+}
+
+.login-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-box input{
+    width:100%;
+    padding:13px 45px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.input-box input:focus{
+    border-color:#2C5E92;
+    box-shadow:0 0 8px rgba(44,94,146,.2);
+}
+
+.input-box i:first-child{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#2C5E92;
+}
+
+.toggle-password{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#666;
+}
+
+.login-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    background:#2C5E92;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#1F4870;
+}
+
+.button-group{
+
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+.button-group button{
+
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#007BFF;
+color:white;
+cursor:pointer;
+
+}
+
+.button-group button:hover{
+
+background:#0056b3;
+
+}
+
+@media(max-width:768px){
+
+.account-card{
+
+padding:20px;
+
+}
+
+.account-card p{
+
+font-size:15px;
+
+}
+
+.button-group{
+
+flex-direction:column;
+
+}
+
+.button-group button{
+
+width:100%;
+
+}
+
+}
+
+.register-card{
+
+max-width:500px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+.register-card h2{
+
+text-align:center;
+color:#7793b0;
+margin-bottom:20px;
+
+}
+
+.register-card input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+
+}
+
+.register-card button{
+
+width:100%;
+padding:12px;
+background:#9eb6cf;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+.account-card{
+
+max-width:500px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+.account-card h2{
+
+text-align:center;
+color:#7793b0;
+margin-bottom:20px;
+
+}
+
+.account-card input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+
+}
+
+.account-card button{
+
+width:100%;
+padding:12px;
+background:#9eb6cf;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+.register-card{
+    color: black;
+}
+
+#account .account-card{
+color:black;
+}
+
+#account .account-card p,
+#account .account-card b,
+#account .account-card span{
+color:black;
+}
+
+/* ================= COURSE ================= */
+
+.card{
+
+    text-align:center;
+    width:100%;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    
+    font-size:18px;
+}
+
+.card p{
+    margin:0 12px 15px;
+    font-size:14px;
+    
+}
+
+/* Gambar Course */
+.card img{
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card img:hover{
+    transform:scale(1.03);
+}
+
+/* Lightbox */
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(255,255,255,.3);
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.close:hover{
+    color:#ddd;
+}
+
+/* ================= DETAIL COURSE ================= */
+
+.course-detail{
+
+display:none;
+margin-top:40px;
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+animation:fadeCourse .4s;
+
+}
+
+@keyframes fadeCourse{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.course-detail-content{
+
+display:flex;
+gap:40px;
+align-items:center;
+
+}
+
+.course-image{
+
+flex:1;
+
+}
+
+.course-image img{
+
+width:100%;
+max-width:420px;
+border-radius:15px;
+transition:.3s;
+
+}
+
+.course-image img:hover{
+
+transform:scale(1.08);
+
+}
+
+.course-text{
+
+flex:1;
+
+}
+
+.course-text h2{
+
+color:#4f699b;
+margin-bottom:20px;
+
+}
+
+.course-text h3{
+
+margin-top:20px;
+
+}
+
+@media(max-width:768px){
+
+.course-detail-content{
+
+flex-direction:column;
+
+}
+
+.course-image img{
+
+max-width:100%;
+
+}
+
+}
+
+/* ================= TESTIMONI ================= */
+
+.testimonial-section{
+    padding:80px 8%;
+    background:#f8fbff;
+    text-align:center;
+}
+
+.testimonial-section h2{
+    font-size:36px;
+    color:#4b6cb7;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:45px;
+}
+
+.testimonial-card:hover{
+    
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+
+.testimonial-card img{
+
+    margin-bottom:15px;
+    
+}
+
+.testimonial-card h3{
+    color:#333;
+    margin-bottom:5px;
+}
+
+.testimonial-card span{
+    color:#777;
+    font-size:14px;
+}
+
+.stars{
+
+    margin:15px 0;
+}
+
+.testimonial-card{
+
+    cursor:pointer;
+
+}
+
+@media(max-width:900px){
+    .testimonial-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.testimonial-section{
+    padding:60px 20px;
+}
+
+.testimonial-section h2{
+    font-size:28px;
+}
+
+}
+
+/* Tombol Tutup Detail */
+
+.close-detail{
+
+margin-top:25px;
+padding:12px 25px;
+background:#7793b0;
+color:#fff;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:15px;
+transition:.3s;
+
+}
+
+.close-detail:hover{
+
+background:#b02a37;
+
+}
+
+.contact-box{
+    max-width:600px;
+    margin:40px auto;
+}
+
+/* Footer */
+
+footer p{
+    text-align: center;
+    line-height: 1.8;
+}
+
+.contact-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.contact-table{
+    color: #fff;
+}
+
+.contact-table td{
+    padding: 8px 10px;
+}
+
+.contact-table a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-table a:hover{
+    color: #00c3ff;
+}
+
+/* Copyright */
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+
+    /* Tidak bisa dipilih atau diklik */
+    user-select: none;
+    pointer-events: none;
+}
+
+.footer-bottom p{
+    margin: 0;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+footer{
+
+    text-align:center;
+    padding:30px;
+}
+/* ================= HEADER OVERRIDE ================= */
+
+header{
+
+    /* Biru #80aad3 dengan transparansi */
+    background: rgba(128,170,211,0.88) !important;
+
+    /* Efek kaca */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Memberi ruang atas-bawah dan kiri-kanan */
+    padding:18px 50px !important;
+
+    /* Jarak antara logo dan menu */
+    column-gap:40px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+
+    /* Jarak antar menu */
+    gap:10px !important;
+
+}
+
+/* Ruang pada setiap menu */
+
+nav a{
+
+    padding:10px 6px;
+    
+    letter-spacing:.3px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:992px){
+
+header{
+
+padding:16px 30px !important;
+
+}
+
+nav{
+
+gap:18px !important;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+header{
+
+padding:15px 20px !important;
+
+}
+
+nav{
+
+gap:12px !important;
+
+}
+
+nav a{
+
+padding:8px 5px;
+font-size:14px;
+
+}
+
+}
+
+.cart-section{
+
+margin-top:60px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.cart-btn {
+    position: relative;
+    width: 60px !important;
+    height: 50px;
+
+    margin: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.cart-badge {
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    min-width: 18px;
+    height: 18px;
+
+    padding: 0 4px;
+
+    border-radius: 50%;
+
+    background: #e53935;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* ICON TROLI */
+
+.cart-navbar{
+    
+    color:white;
+    font-size:22px;
+    text-decoration:none;
+}
+
+/* MODAL KERANJANG */
+
+.close-cart{
+    float:right;
+    font-size:35px;
+    cursor:pointer;
+}
+
+.cart-item{
+    
+    justify-content:space-between;
+
+    margin:12px 0;
+
+}
+
+/* ================= FOOTER FIX ================= */
+
+footer{
+    background:#80aad3 !important;
+    color:#ffffff !important;
+}
+
+/* ================= ANIMASI ADD TO CART ================= */
+
+@keyframes cartBounce{
+
+0%{transform:scale(1);}
+30%{transform:scale(1.35);}
+60%{transform:scale(.9);}
+100%{transform:scale(1);}
+
+}
+
+@keyframes addSuccess{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+
+}
+
+/* ================= NOTIFIKASI ================= */
+
+.toast{
+    position:fixed;
+    top:90px;
+    right:25px;
+
+    background:#28a745;
+    color:#fff;
+
+    padding:15px 22px;
+    border-radius:10px;
+
+    font-size:15px;
+    font-weight:bold;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transform:translateX(400px);
+    opacity:0;
+
+    transition:.5s;
+
+    z-index:999999;
+}
+
+.toast.show{
+    transform:translateX(0);
+    opacity:1;
+}
+
+.toast i{
+    font-size:20px;
+}
+
+@keyframes popupCart{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+.cart-subtotal{
+    margin-top:20px;
+    padding:15px;
+    border-top:2px solid #ddd;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.cart-subtotal h2{
+    color:#0b8f3d;
+    margin:0;
+}
+
+/* ================= CART SCROLL ================= */
+
+/* Responsive */
+
+/* ================= ANIMASI FLY TO CART ================= */
+
+.fly-image{
+    position:fixed;
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:12px;
+
+    pointer-events:none;
+    z-index:999999;
+
+    transition:
+        left .9s cubic-bezier(.18,.75,.25,1),
+        top .9s cubic-bezier(.18,.75,.25,1),
+        transform .9s cubic-bezier(.18,.75,.25,1),
+        opacity .9s,
+        width .9s,
+        height .9s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* Animasi icon cart */
+
+.cart-bounce{
+    animation:cartBounce .6s ease;
+}
+
+@keyframes cartBounce{
+
+    0%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.25) rotate(-10deg);
+    }
+
+    50%{
+        transform:scale(.92) rotate(10deg);
+    }
+
+    75%{
+        transform:scale(1.12);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* Tombol Add Cart */
+
+.add-success{
+    animation:addCartSuccess .45s;
+}
+
+@keyframes addCartSuccess{
+
+    0%{
+        transform:scale(1);
+    }
+
+    40%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ================= PERBAIKI POSISI MISI ================= */
+
+#profile ul{
+    list-style-position: outside;
+    padding-left: 0px;   /* Ubah dari bawaan browser (±40px) menjadi lebih rapat */
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+#profile ul li{
+    margin-left: 0;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
+/* ================= NAVBAR PAGES ================= */
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown > a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Menu disembunyikan */
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 180px;
+
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+    z-index: 9999;
+}
+
+/* Tampil saat mouse diarahkan ke Pages */
+.dropdown:hover .dropdown-menu{
+    display: block;
+    animation: fadeMenu .25s ease;
+}
+
+/* Tetap tampil saat menu sedang dipilih */
+.dropdown:focus-within .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu a{
+    display: block;
+    padding: 12px 18px;
+    color: #333 !important;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.dropdown-menu a:hover{
+    background: #80aad3;
+    color: #fff !important;
+}
+
+@keyframes fadeMenu{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= HOME ================= */
+
+#home{
+    width:100%;
+    margin-top:0px;      /* tinggi navbar */
+    padding:0;
+    overflow:hidden;
+    scroll-margin-top:90px; /* agar tidak tertutup navbar */
+}
+
+.hero{
+    
+    max-width:100%;
+    
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+.hero img{
+
+    object-fit:cover;
+    object-position:center;
+    
+}
+
+/* ==========================================
+   MOBILE SIDEBAR ONLY (HP)
+   Desktop & Tablet tidak berubah
+========================================== */
+
+@media screen and (max-width:768px){
+
+    /* Header */
+    header{
+        height:80px;
+        padding:0 18px !important;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    /* Hamburger */
+    #hamburger-menu{
+        display:flex !important;
+        align-items:center;
+        justify-content:center;
+        font-size:34px;
+        color:#fff;
+        cursor:pointer;
+        margin-right:8px;
+        z-index:1001;
+    }
+
+    /* Sidebar */
+
+    /* Sidebar aktif */
+    #navbar.active{
+        right:0;
+    }
+
+    /* Menu */
+    #navbar a{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:18px 0;
+
+        color:#fff;
+
+        font-size:16px;
+
+        font-weight:600;
+
+        text-decoration:none;
+
+    }
+
+    /* Dropdown */
+    .dropdown{
+
+        width:100%;
+
+    }
+
+    .dropdown>a{
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:6px;
+
+    }
+
+    .dropdown-menu{
+
+        position:static;
+
+        width:100%;
+
+        display:none;
+
+        background:#7da0ca;
+
+        box-shadow:none;
+
+        border-radius:0;
+
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu{
+
+        display:block;
+
+    }
+
+    .dropdown-menu a{
+
+        padding:14px 0;
+
+        font-size:15px;
+
+    }
+
+    /* Keranjang */
+
+}
+
+/* ===================================================
+   RESPONSIVE WEBSITE LCC KARADENAN
+=================================================== */
+
+/* ================= Laptop ================= */
+
+@media screen and (max-width:1366px){
+
+    html{
+        font-size:95%;
+    }
+
+    .hero{
+        height:650px;
+    }
+
+    #courses{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+/* Hamburger */
+
+/* Sidebar */
+
+#navbar.active{
+
+    right:0;
+
+}
+
+#navbar a{
+
+    width:100%;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+/* ================= Tablet ================= */
+
+@media screen and (max-width:992px){
+
+    html{
+        font-size:90%;
+    }
+
+    header{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:15px 25px !important;
+        row-gap:15px;
+    }
+
+    .logo-container{
+        justify-content:center;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:15px;
+    }
+
+    .hero{
+        height:450px;
+    }
+
+    #courses{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .course-detail-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .course-image img{
+        max-width:100%;
+    }
+
+    .testimonial-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .login-box,
+    .register-card,
+    .account-card{
+        width:90%;
+        max-width:500px;
+    }
+
+}
+
+/* ================= Mobile ================= */
+
+@media screen and (max-width:768px){
+
+    html{
+        font-size:80%;
+    }
+
+    header{
+        grid-template-columns:1fr;
+        padding:15px !important;
+    }
+
+    .logo-container{
+        justify-content:center;
+        margin-bottom:10px;
+    }
+
+    .logo,
+    .logo2{
+        width:50px;
+        height:50px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        gap:10px;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:14px;
+        padding:8px 5px;
+    }
+
+    .hero{
+        height:300px;
+    }
+
+    .sec{
+        padding:20px;
+    }
+
+    #courses{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:200px;
+    }
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img{
+        width:100%;
+        height:auto;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .button-group button{
+        width:100%;
+    }
+
+    .cart-item{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .cart-subtotal{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+    #paymentMethod{
+        width:100%;
+    }
+
+    .login-box,
+    .register-card,
+    .account-card{
+        width:100%;
+        padding:20px;
+    }
+
+}
+
+/* ================= HP Kecil ================= */
+
+@media screen and (max-width:480px){
+
+    html{
+        font-size:75%;
+    }
+
+    header{
+        padding:10px !important;
+    }
+
+    .logo,
+    .logo2{
+        width:45px;
+        height:45px;
+    }
+
+    nav{
+        gap:8px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        height:220px;
+    }
+
+    .card h3{
+        font-size:16px;
+    }
+
+    .card p{
+        font-size:13px;
+    }
+
+    .testimonial-section h2{
+        font-size:24px;
+    }
+
+    .contact-table td{
+        display:block;
+        text-align:center;
+        padding:6px;
+    }
+
+    .toast{
+        width:90%;
+        left:5%;
+        right:5%;
+        top:70px;
+    }
+
+    footer{
+        padding:20px 15px;
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE DETAIL COURSE
+   Tujuan - Manfaat - Harga
+========================================== */
+
+/* Judul */
+.course-text h2,
+.course-text h3{
+    text-align:center;
+}
+
+/* Isi paragraf */
+.course-text p{
+          /* rata kanan kiri */
+    text-justify:inter-word;
+    
+    margin-bottom:18px;
+}
+
+/* Harga */
+.course-text h4,
+.course-text .price,
+.course-text .harga{
+    text-align:left;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* ================= Tablet ================= */
+
+@media (max-width:768px){
+
+    .course-text{
+        width:100%;
+    }
+
+    .course-text h2{
+        font-size:30px;
+    }
+
+    .course-text h3{
+        font-size:22px;
+    }
+
+    .course-text p{
+        font-size:15px;
+        text-align:justify;
+        line-height:1.8;
+    }
+
+}
+
+/* ================= HP ================= */
+
+@media (max-width:480px){
+
+    .course-text h2{
+        font-size:24px;
+    }
+
+    .course-text h3{
+        font-size:19px;
+    }
+
+    .course-text p{
+        font-size:14px;
+        text-align:justify;
+        line-height:1.7;
+    }
+
+}
+
+/* ================= judul berada di kiri dan isi paragraf rata kanan-kiri ================= */
+
+.course-text h3{
+    text-align:left;
+    color:#7793b0;
+    font-weight:bold;
+}
+
+.course-text p{
+    text-align:justify;
+    line-height:1.9;
+}
+
+/* =====================================================
+   RESPONSIVE FIX (Tambahkan paling bawah CSS)
+===================================================== */
+
+/* Semua elemen */
+*{
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* Semua gambar */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Section */
+.sec{
+    width:100%;
+    padding:60px 6%;
+}
+
+/* Header */
+header{
+    
+    min-height:85px;
+
+    flex-wrap:wrap;
+}
+
+/* Logo */
+
+.logo,
+.logo2{
+    width:60px;
+    height:60px;
+}
+
+/* Navbar Desktop */
+nav{
+
+    flex-wrap:wrap;
+}
+
+/* Hero */
+.hero{
+    width:100%;
+    height:auto;
+}
+
+.hero img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* Course */
+
+/* Testimoni */
+
+/* Login */
+.login-box,
+.register-card,
+.account-card{
+    width:100%;
+    max-width:500px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+header{
+
+    padding:15px 20px !important;
+
+}
+
+.logo,
+.logo2{
+
+    width:55px;
+    height:55px;
+
+}
+
+.hero img{
+
+    width:100%;
+    height:auto;
+
+}
+
+.course-detail-content{
+
+    flex-direction:column;
+
+}
+
+.course-image,
+.course-text{
+
+    width:100%;
+
+}
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+header{
+
+    padding:12px 15px !important;
+    flex-wrap:nowrap;
+
+}
+
+/* Hamburger muncul */
+
+#hamburger-menu{
+
+    display:block;
+
+}
+
+/* Sidebar */
+
+#navbar.active{
+
+    right:0;
+
+}
+
+#navbar a{
+
+    width:100%;
+    text-align:center;
+    padding:16px;
+
+}
+
+.logo,
+.logo2{
+
+    width:48px;
+    height:48px;
+
+}
+
+.sec{
+
+    padding:25px 18px;
+
+}
+
+#courses{
+
+    grid-template-columns:1fr;
+
+}
+
+.testimonial-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+}
+
+.button-group{
+
+    flex-direction:column;
+
+}
+
+.button-group button{
+
+    width:100%;
+
+}
+
+.cart-item{
+
+    flex-direction:column;
+
+}
+
+.cart-subtotal{
+
+    flex-direction:column;
+
+}
+
+}
+
+/* =====================================================
+   iPhone SE / Android kecil
+===================================================== */
+
+@media (max-width:480px){
+
+html{
+
+    font-size:14px;
+
+}
+
+header{
+
+    min-height:75px;
+
+}
+
+.logo,
+.logo2{
+
+    width:42px;
+    height:42px;
+
+}
+
+.hero{
+
+    margin-top:75px;
+
+}
+
+h1{
+
+    font-size:28px;
+
+}
+
+h2{
+
+    font-size:22px;
+
+}
+
+h3{
+
+    font-size:18px;
+
+}
+
+p{
+
+    font-size:14px;
+
+}
+
+.card{
+
+    border-radius:12px;
+
+}
+
+.card img{
+
+    height:190px;
+    object-fit:cover;
+
+}
+
+.contact-table td{
+
+    display:block;
+    text-align:center;
+
+}
+
+}
+
+/* =====================================================
+   DESKTOP BESAR
+===================================================== */
+
+@media (min-width:1400px){
+
+.sec{
+
+    max-width:1400px;
+    margin:auto;
+
+}
+
+.hero img{
+
+    width:100%;
+
+}
+
+}
+
+/* ================= HEADER ================= */
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #8fb1d6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+/* Logo */
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+}
+
+/* Navbar */
+nav{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:600;
+    transition:.3s;
+    white-space:nowrap;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+.cart-navbar{
+    margin-left:20px;
+    position:relative;
+}
+
+@media(max-width:992px){
+
+header{
+    padding:15px 30px;
+}
+
+nav{
+    gap:20px;
+}
+
+nav a{
+    font-size:17px;
+}
+
+.logo{
+    width:60px;
+}
+
+.logo2{
+    width:55px;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+    padding:15px;
+}
+
+navbar-nav{
+    display:flex;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+}
+#courses{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:35px;
+
+}
+
+.card{
+
+display:flex;
+
+flex-direction:column;
+
+height:100%;
+
+border-radius:15px;
+
+overflow:hidden;
+
+background:#fff;
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+transition:.3s;
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.card h3{
+
+margin:18px 15px 10px;
+
+text-align:center;
+
+min-height:55px;
+
+}
+
+.card p{
+
+padding:0 18px;
+
+text-align:center;
+
+color:#555;
+
+flex:1;
+
+line-height:1.6;
+
+}
+
+.cart-btn{
+
+margin-top:auto;
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+background:#7ca6cf;
+
+color:#fff;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+border-radius:0;
+
+}
+
+.cart-btn:hover{
+
+background:#4e7fae;
+
+margin-top:auto;
+
+}
+
+#search{
+
+width:320px;
+
+max-width:100%;
+
+padding:12px 18px;
+
+border-radius:8px;
+
+border:1px solid #ccc;
+
+font-size:16px;
+
+margin:20px 0 35px;
+
+}
+
+@media(max-width:992px){
+
+#courses{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+#courses{
+
+grid-template-columns:1fr;
+
+}
+
+.card img{
+
+height:200px;
+
+}
+
+}
+
+/* ================= ULASAN ================= */
+
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.testimonial-card{
+    background: #fff;
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-height: 430px;
+    transition: .3s;
+}
+
+.testimonial-card:hover{
+    transform: translateY(-8px);
+}
+
+.testimonial-card img{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 4px solid #8fb1d6;
+}
+
+.stars{
+    color: gold;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+.testimonial-card p{
+    color: #444;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-top: auto;
+}
+@media (max-width: 992px){
+
+.testimonial-grid{
+    grid-template-columns: repeat(2,1fr);
+    gap:25px;
+}
+
+}
+@media (max-width:768px){
+
+.testimonial-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.testimonial-card{
+    min-height:auto;
+}
+
+}
+
+/* ======================================================
+   RESPONSIVE KHUSUS MOBILE HP
+   Desktop & Tablet TIDAK BERUBAH
+====================================================== */
+
+@media screen and (max-width: 768px){
+
+    /* ================= HEADER ================= */
+
+    header{
+        height:70px;
+        padding:0 15px;
+    }
+
+    /* Logo */
+    .logo-container{
+        display:flex;
+        align-items:center;
+        gap:6px;
+    }
+
+    .logo,
+    .logo2{
+        width:50px;
+        height:50px;
+
+        display:block;
+    }
+
+    /* ================= GALLERY ================= */
+
+    .gallery{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+
+        margin-top:20px;
+
+    }
+
+    .gallery h2,
+    .gallery p{
+
+        grid-column:1 / -1;
+
+    }
+
+    .gallery img{
+
+        width:100%;
+
+        height:150px;
+
+        object-fit:cover;
+
+        border-radius:10px;
+
+        display:block;
+
+    }
+
+}
+
+/* ==================================================
+   RESPONSIVE CONTACT KHUSUS MOBILE HP
+   Desktop & Tablet Tidak Berubah
+================================================== */
+
+@media screen and (max-width:768px){
+
+footer{
+    padding:35px 20px;
+    text-align:center;
+}
+
+footer p:first-child{
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* Contact */
+
+.contact-box{
+    width:100%;
+    margin:20px auto;
+}
+
+.contact-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.contact-table tr{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.contact-table td{
+    border:none;
+    padding:2px 0;
+    text-align:center;
+    font-size:16px;
+}
+
+/* Sembunyikan titik dua */
+
+.contact-table td:nth-child(2){
+    display:none;
+}
+
+/* Judul */
+
+.contact-table td:first-child{
+    font-weight:600;
+    color:#fff;
+    margin-bottom:4px;
+}
+
+/* Isi */
+
+.contact-table td:last-child{
+    color:#fff;
+    opacity:.95;
+}
+
+/* Icon */
+
+.contact-table i{
+    color:#fff;
+    margin-right:6px;
+}
+
+/* Copyright */
+
+footer p:last-child{
+    margin-top:30px;
+    font-size:14px;
+    line-height:1.6;
+}
+
+}
+
+/* =========================
+   MOBILE NAVBAR
+========================= */
+#hamburger-menu{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    .header{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:72px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:0 18px;
+        z-index:9999;
+    }
+
+    /* Logo */
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:8px;
+    }
+
+    .logo img{
+        width:45px;
+        height:45px;
+    }
+
+    /* Hamburger */
+    #hamburger-menu{
+        display:block;
+        font-size:28px;
+        cursor:pointer;
+        color:#fff;
+        z-index:10001;
+    }
+
+    /* Sidebar */
+    .navbar-nav{
+
+        position:fixed;
+
+        top:72px;
+        right:-100%;
+
+        width:250px;
+        height:calc(100vh - 72px);
+
+        background:#ffffff;
+
+        display:flex;
+        flex-direction:column;
+
+        transition:.35s ease;
+
+        padding:20px;
+
+        box-shadow:-5px 0 20px rgba(0,0,0,.15);
+
+        overflow-y:auto;
+
+        z-index:9998;
+    }
+
+    .navbar-nav.active{
+        right:0;
+    }
+
+    .navbar-nav a{
+
+        width:100%;
+
+        padding:14px 5px;
+
+        color:#333;
+
+        text-decoration:none;
+
+        border-bottom:1px solid #ececec;
+
+        font-size:17px;
+    }
+
+    .navbar-nav a:hover{
+        color:#0b63ce;
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE NAVBAR MOBILE
+========================================== */
+
+@media screen and (max-width:768px){
+
+    /* Tombol hamburger */
+    #hamburger-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        cursor: pointer;
+        color: #fff;
+        z-index: 1001;
+    }
+
+    /* Navbar Mobile */
+    .navbar-nav{
+
+        position: fixed;
+
+        top: 60px;          /* Sesuaikan dengan tinggi header */
+        right: -100%;
+
+        width: 280px;
+        height: calc(100vh - 85px);
+
+        background: #8DB4D6;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 25px;
+
+        gap: 20px;
+
+        transition: right .35s ease;
+
+        z-index: 1000;
+    }
+
+    /* ===== CLASS ACTIVE ===== */
+    .navbar-nav.active{
+        right: 0;
+    }
+
+    .navbar-nav ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .navbar-nav li{
+        width: 100%;
+    }
+
+    .navbar-nav a{
+        display: block;
+        width: 100%;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 0;
+    }
+
+} 
+
+/* ======================================================
+   POSISI ICON TROLI MOBILE & TABLET
+   ====================================================== */
+
+@media screen and (max-width: 992px) {
+
+    .navbar-nav .cart-navbar {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .navbar-nav .cart-navbar .fa-cart-shopping {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+    }
+
+}
+
+/* ======================================================
+   HILANGKAN GARIS PADA CART - MOBILE & TABLET
+   ====================================================== */
+
+@media screen and (max-width: 992px) {
+
+    .navbar-nav .cart-navbar {
+        border: none !important;
+        border-top: none !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+
+        text-decoration: none !important;
+    }
+
+    .navbar-nav .cart-navbar::before,
+    .navbar-nav .cart-navbar::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    .navbar-nav .cart-navbar i {
+        border: none !important;
+        text-decoration: none !important;
+    }
+}
+
+/* =====================================================
+   FIX HOME HERO MOBILE
+   Agar gambar tidak tertutup HEADER / LOGO
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* HOME */
+    #home {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        /* Memberi ruang untuk header mobile */
+        padding-top: 70px;
+    }
+
+    /* HERO */
+    #home .hero {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* GAMBAR HERO */
+    #home .hero img {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+
+        display: block;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media screen and (max-width: 480px) {
+
+    #home {
+        padding-top: 70px;
+    }
+
+    #home .hero {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    #home .hero img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+/* =========================================================
+   MOBILE - PAGES DROPDOWN DI DALAM HAMBURGER
+   ========================================================= */
+
+@media (max-width: 758px) {
+
+    /* Navbar hamburger */
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 85%;
+        max-width: 320px;
+        background: #8db5d6;
+        z-index: 9999;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 15px 12px 20px;
+        margin: 0;
+
+        transition: right 0.3s ease;
+
+        /* penting agar submenu tetap berada di dalam */
+        overflow: visible;
+    }
+
+    /* Saat hamburger dibuka */
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    /* Semua menu utama */
+    .navbar .navbar-nav > li {
+        width: 100%;
+        position: relative;
+        list-style: none;
+    }
+
+    .navbar .navbar-nav > li > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 52px;
+
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+
+        border-bottom: 1px solid rgba(255,255,255,0.45);
+        box-sizing: border-box;
+    }
+
+    /* =====================================================
+       PAGES
+       ===================================================== */
+
+    .pages-menu {
+        width: 100%;
+        position: relative;
+    }
+
+    /* Tombol Pages */
+    .pages-toggle {
+        width: 100%;
+        min-height: 52px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.45);
+
+        color: #fff;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: 600;
+
+        cursor: pointer;
+        padding: 12px 10px;
+    }
+
+    /* Panah Pages */
+    .pages-arrow {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1;
+
+        transition: transform 0.25s ease;
+    }
+
+    /* Panah berputar ketika dropdown terbuka */
+    .pages-menu.active .pages-arrow {
+        transform: rotate(180deg);
+    }
+
+    /* =====================================================
+       DROPDOWN TETAP DI DALAM HAMBURGER
+       ===================================================== */
+
+    .pages-dropdown {
+        display: none;
+
+        position: static !important;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        background: rgba(80, 130, 180, 0.35);
+
+        list-style: none;
+
+        box-sizing: border-box;
+    }
+
+    /* Dropdown aktif */
+    .pages-menu.active .pages-dropdown {
+        display: block;
+    }
+
+    /* Item About Us / Contact / Instructors */
+    .pages-dropdown li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pages-dropdown li a {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 44px;
+
+        padding: 10px 15px;
+
+        box-sizing: border-box;
+
+        color: #222;
+        background: rgba(255,255,255,0.12);
+
+        text-decoration: none;
+        font-weight: 600;
+
+        border-bottom: 1px solid rgba(255,255,255,0.35);
+
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    /* Hover / sentuh */
+    .pages-dropdown li a:hover,
+    .pages-dropdown li a:active {
+        background: rgba(255,255,255,0.25);
+    }
+
+    /* =====================================================
+       HAMBURGER
+       ===================================================== */
+
+    .hamburger-menu {
+        position: relative;
+        z-index: 10001;
+        cursor: pointer;
+    }
+}
+
+/* =====================================================
+   FIX FINAL NAVBAR TABLET / iPAD PRO
+   Navbar tetap 1 BARIS seperti Laptop
+   Tidak mengubah struktur HTML
+   ===================================================== */
+
+@media screen and (min-width:769px) and (max-width:1366px){
+
+    /* ================= HEADER ================= */
+
+    header{
+        display:flex !important;
+        flex-direction:row !important;
+        align-items:center !important;
+        justify-content:space-between !important;
+
+        flex-wrap:nowrap !important;
+
+        width:100% !important;
+        min-height:85px !important;
+
+        padding:15px 25px !important;
+
+        column-gap:15px !important;
+        row-gap:0 !important;
+
+        box-sizing:border-box !important;
+    }
+
+    /* ================= LOGO ================= */
+
+    .logo-container{
+        display:flex !important;
+        flex-direction:row !important;
+        align-items:center !important;
+
+        justify-content:flex-start !important;
+
+        gap:5px !important;
+
+        flex-shrink:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    .logo,
+    .logo2{
+        width:55px !important;
+        height:55px !important;
+
+        flex-shrink:0 !important;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav{
+        display:flex !important;
+        flex-direction:row !important;
+
+        align-items:center !important;
+        justify-content:center !important;
+
+        flex-wrap:nowrap !important;
+
+        gap:7px !important;
+
+        flex:1 1 auto !important;
+
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    /* ================= MENU ================= */
+
+    nav a{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+
+        flex-shrink:0 !important;
+
+        white-space:nowrap !important;
+
+        font-size:14px !important;
+        font-weight:600 !important;
+
+        padding:8px 3px !important;
+
+        margin:0 !important;
+    }
+
+    /* ================= PAGES ================= */
+
+    .dropdown{
+        display:inline-flex !important;
+        align-items:center !important;
+
+        flex-shrink:0 !important;
+    }
+
+    .dropdown > a{
+        display:flex !important;
+        align-items:center !important;
+
+        white-space:nowrap !important;
+    }
+
+    /* ================= CART ================= */
+
+    .cart-navbar{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+
+        flex-shrink:0 !important;
+
+        margin-left:5px !important;
+        margin-right:0 !important;
+
+        width:auto !important;
+    }
+
+    .cart-navbar i{
+        font-size:20px !important;
+    }
+
+    /* ================= HAMBURGER ================= */
+
+    #hamburger-menu,
+    .menu-toggle{
+        display:none !important;
+    }
+
+    .navbar-nav{
+        display:flex !important;
+    }
+}
+
+
+/* ================= COURSE TERPOPULER ================= */
+
+.card {
+    position: relative;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background: #e67e22;
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    z-index: 5;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Efek hover */
+
+.popular-course:hover .popular-badge {
+    transform: scale(1.05);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .popular-badge {
+        top: 8px;
+        left: 8px;
+
+        padding: 5px 8px;
+
+        font-size: 9px;
+    }
+
+}
+
+/* ==========================================================
+   PELATIHAN BARU - COURSE CARD
+   ========================================================== */
+
+.courses {
+    padding: 70px 8%;
+    background: #f5f7fa;
+}
+
+.courses .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-head .eyebrow {
+    color: #779fc7;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-head h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #333;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    width: 100%;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.course-card {
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    min-width: 0;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================
+   GAMBAR
+========================= */
+
+.course-card__img {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.course-card__img img {
+
+    display: block;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.course-card__tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    background: #7da8d1;
+    color: #ffffff;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =========================
+   ISI CARD
+========================= */
+
+.course-card__body h3 {
+    margin: 0 0 10px;
+    font-size: 21px;
+    color: #222;
+}
+
+.course-card__body p {
+    margin: 0 0 18px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* =========================
+   META
+========================= */
+
+.course-card__meta {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 20px;
+
+    color: #555;
+    font-size: 14px;
+}
+
+.course-card__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =========================
+   FOOTER CARD
+========================= */
+
+.course-card__price {
+    color: #222;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.course-card .btn {
+    border: none;
+    background: #80aad3;
+    color: #ffffff;
+
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.course-card .btn:hover {
+    background: #6f99c2;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+    .courses {
+        padding: 55px 5%;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .course-card__img {
+        height: 200px;
+    }
+
+}
+
+/* HP */
+
+@media (max-width: 768px) {
+
+    .courses {
+        padding: 45px 18px;
+    }
+
+    .section-head h2 {
+        font-size: 26px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .course-card__img {
+        height: 210px;
+    }
+
+}
+
+/* HP KECIL */
+
+@media (max-width: 480px) {
+
+    .course-card__img {
+        height: 190px;
+    }
+
+    .course-card__body {
+        padding: 18px;
+    }
+
+    .course-card__body h3 {
+        font-size: 19px;
+    }
+
+    .course-card__body p {
+        font-size: 14px;
+    }
+
+    .course-card__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .course-card .btn {
+        width: 100%;
+    }
+
+}
+
+.overlay {
+    display: none;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.cart-drawer {
+
+    margin-left: auto;
+    overflow-y: auto;
+}
+
+.cart-item-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.cart-quantity button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-cart {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* =====================================================
+   FIX FINAL CART
+   Jangan hapus CSS lainnya.
+   Letakkan di PALING BAWAH style.css
+===================================================== */
+
+/* ===============================
+   CART NAVBAR
+================================ */
+
+#cartBtn.cart-btn{
+
+    height:50px !important;
+
+    min-width:60px !important;
+
+    border:none !important;
+    border-radius:8px !important;
+
+    background:#7ca6cf !important;
+    color:#fff !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    font-size:21px;
+
+}
+
+#cartBtn.cart-btn:hover{
+
+    background:#5b86b6 !important;
+
+}
+
+/* ===============================
+   CART BADGE
+================================ */
+
+#cartBadge.cart-badge{
+
+    line-height:1;
+
+}
+
+/* ===============================
+   OVERLAY
+================================ */
+
+#cartOverlay.overlay{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:none;
+
+    background:rgba(0,0,0,.55);
+
+    z-index:99999;
+
+    justify-content:flex-end;
+
+    align-items:stretch;
+
+}
+
+/* Saat cart dibuka */
+
+#cartOverlay.overlay.active{
+
+    display:flex;
+
+}
+
+/* ===============================
+   CART DRAWER
+================================ */
+
+#cartOverlay .cart-drawer{
+
+    width:420px;
+
+    max-width:100%;
+
+    height:100%;
+
+    margin:0;
+
+    padding:0;
+
+    background:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    box-shadow:-8px 0 30px rgba(0,0,0,.2);
+
+    animation:cartSlideIn .3s ease;
+
+}
+
+/* Animasi */
+
+@keyframes cartSlideIn{
+
+    from{
+
+        transform:translateX(100%);
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===============================
+   CART HEADER
+================================ */
+
+/* Tombol X */
+
+.cart-drawer__head .modal__close{
+
+    width:38px !important;
+    height:38px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    border:none !important;
+
+    border-radius:50% !important;
+
+    background:rgba(255,255,255,.2) !important;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+}
+
+.cart-drawer__head .modal__close:hover{
+
+    background:rgba(255,255,255,.35) !important;
+
+}
+
+/* ===============================
+   CART BODY
+================================ */
+
+/* Scrollbar */
+
+.cart-drawer__body::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+}
+
+/* ===============================
+   CART ITEM
+================================ */
+
+#cartItems .cart-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 10px;
+
+    border-bottom:1px solid #e5e5e5;
+
+    background:#fff;
+
+}
+
+/* gambar */
+
+#cartItems .cart-item-image{
+
+    width:70px;
+
+    height:70px;
+
+    min-width:70px;
+
+    object-fit:cover;
+
+    border-radius:9px;
+
+}
+
+/* informasi */
+
+#cartItems .cart-item-info{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+#cartItems .cart-item-info h3{
+
+    margin:0 0 5px;
+
+    font-size:15px;
+
+    color:#333;
+
+}
+
+#cartItems .cart-item-info p{
+
+    margin:0;
+
+    color:#55779a;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+/* ===============================
+   QUANTITY
+================================ */
+
+#cartItems .cart-quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:8px;
+
+}
+
+#cartItems .cart-quantity button{
+
+    width:28px !important;
+    height:28px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    border:none !important;
+
+    border-radius:6px !important;
+
+    background:#80aad3 !important;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+}
+
+#cartItems .cart-quantity button:hover{
+
+    background:#5b86b6 !important;
+
+}
+
+#cartItems .cart-quantity span{
+
+    min-width:20px;
+
+    text-align:center;
+
+    color:#333;
+
+    font-weight:bold;
+
+}
+
+/* ===============================
+   REMOVE
+================================ */
+
+#cartItems .remove-cart{
+
+    width:35px !important;
+    height:35px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    background:transparent !important;
+
+    color:#dc3545 !important;
+
+    border:none !important;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+}
+
+#cartItems .remove-cart:hover{
+
+    background:#ffecec !important;
+
+}
+
+/* ===============================
+   EMPTY CART
+================================ */
+
+.empty-cart{
+
+    height:250px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:#777;
+
+}
+
+.empty-cart i{
+
+    font-size:45px;
+
+    color:#9dbbd8;
+
+    margin-bottom:15px;
+
+}
+
+.empty-cart p{
+
+    margin:0;
+
+    font-size:15px;
+
+}
+
+/* ===============================
+   CART FOOTER
+================================ */
+
+/* Total */
+
+/* Checkout */
+
+#checkoutBtn{
+
+    width:100% !important;
+
+    padding:13px !important;
+
+    border:none !important;
+
+    border-radius:9px !important;
+
+    background:#80aad3 !important;
+
+}
+
+#checkoutBtn:hover{
+
+    background:#5b86b6 !important;
+
+}
+
+/* ===============================
+   CHECKOUT OVERLAY
+================================ */
+
+#checkoutOverlay.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.6);
+
+    z-index:100000;
+
+}
+
+#checkoutOverlay.overlay.active{
+
+    display:flex;
+
+}
+
+/* ===============================
+   CHECKOUT MODAL
+================================ */
+
+/* close checkout */
+
+#checkoutOverlay .modal__close{
+
+    width:35px !important;
+    height:35px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    border:none !important;
+
+    border-radius:50% !important;
+
+    background:#eee !important;
+
+    color:#333;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ===============================
+   CHECKOUT FORM
+================================ */
+
+#checkoutForm label{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    color:#333;
+
+    font-weight:600;
+
+}
+
+#checkoutForm input,
+#checkoutForm select{
+
+    margin-top:7px;
+
+    outline:none;
+
+}
+
+#checkoutForm input:focus,
+#checkoutForm select:focus{
+
+    border-color:#80aad3;
+
+}
+
+/* ===============================
+   CHECKOUT SUMMARY
+================================ */
+
+.checkout-summary{
+
+    padding:15px;
+
+    background:#f5f7fa;
+
+    border-radius:10px;
+
+}
+
+.checkout-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:8px 0;
+
+    border-bottom:1px solid #ddd;
+
+    font-size:14px;
+
+    color:#333;
+
+}
+
+.checkout-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:15px;
+
+    padding-top:12px;
+
+    border-top:2px solid #80aad3;
+
+    color:#2c5e92;
+
+}
+
+/* ===============================
+   MOBILE CART
+================================ */
+
+@media(max-width:768px){
+
+    #cartOverlay .cart-drawer{
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+    #cartOverlay .cart-drawer__head{
+
+        padding:17px;
+
+    }
+
+    #cartOverlay .cart-drawer__body{
+
+        padding:8px;
+
+    }
+
+    #checkoutOverlay{
+
+        padding:10px;
+
+    }
+
+    #checkoutOverlay .modal{
+
+        max-height:95vh;
+
+        padding:22px;
+
+        border-radius:12px;
+
+    }
+
+}
+
+/* HP KECIL */
+
+@media(max-width:480px){
+
+    #cartItems .cart-item-image{
+
+        width:60px;
+
+        height:60px;
+
+        min-width:60px;
+
+    }
+
+    #cartItems .cart-item-info h3{
+
+        font-size:14px;
+
+    }
+
+    .cart-drawer__head h2{
+
+        font-size:18px;
+
+    }
+
+}
+
+/* ==========================================================
+   FINAL CART FIX
+========================================================== */
+
+#cartBtn.cart-btn {
+    position: relative;
+    width: 60px !important;
+    min-width: 60px;
+    height: 50px;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #7ca6cf;
+    color: #fff;
+
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#cartBtn.cart-btn:hover {
+    background: #5b86b6;
+}
+
+/* BADGE */
+
+#cartBadge.cart-badge {
+    position: absolute;
+
+    top: -6px;
+    right: -6px;
+
+    min-width: 20px;
+    height: 20px;
+
+    padding: 0 5px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e53935;
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    border: 2px solid #fff;
+}
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+#cartOverlay,
+#checkoutOverlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+
+    align-items: stretch;
+    justify-content: flex-end;
+
+    background: rgba(0, 0, 0, .55);
+
+    z-index: 99999;
+}
+
+#cartOverlay.is-open,
+#checkoutOverlay.is-open {
+    display: flex;
+}
+
+/* ==========================================================
+   CART DRAWER
+========================================================== */
+
+@keyframes cartSlide {
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+/* HEADER CART */
+
+.cart-drawer__head {
+
+    background: #8fb1d6;
+    color: #fff;
+}
+
+/* CLOSE */
+
+.modal__close {
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #fff;
+
+}
+
+/* BODY */
+
+/* CART ITEM */
+
+/* QUANTITY */
+
+.cart-item__actions button {
+
+    margin: 0;
+
+}
+
+/* DELETE */
+
+.cart-item__actions .cart-remove {
+
+    background: #dc3545;
+}
+
+.cart-item__actions .cart-remove:hover {
+    background: #b02a37;
+}
+
+/* EMPTY */
+
+.cart-empty {
+    padding: 50px 20px;
+
+}
+
+/* FOOTER */
+
+/* CHECKOUT BUTTON */
+
+#checkoutBtn {
+
+    margin: 0 !important;
+    padding: 13px;
+
+}
+
+/* ==========================================================
+   CHECKOUT MODAL
+========================================================== */
+
+#checkoutOverlay {
+    align-items: center;
+    justify-content: center;
+}
+
+#checkoutOverlay .modal {
+    width: 500px;
+    max-width: 92%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+
+    animation: popupCart .3s ease;
+}
+
+#checkoutOverlay .modal__close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    background: #7ca6cf;
+}
+
+.modal__title {
+    margin-top: 0;
+
+    color: #2c5e92;
+}
+
+/* CHECKOUT FORM */
+
+#checkoutForm input,
+#checkoutForm select {
+    width: 100%;
+
+    margin: 7px 0 0;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+.checkout-summary {
+    margin: 20px 0;
+}
+
+.checkout-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eee;
+
+    color: #444;
+}
+
+.checkout-row--total {
+    border-top: 2px solid #ddd;
+
+    margin-top: 10px;
+
+    font-size: 18px;
+}
+
+/* ==========================================================
+   ADD CART BUTTON
+========================================================== */
+
+.add-cart-btn {
+    margin: 0 !important;
+
+    white-space: nowrap;
+}
+
+.add-cart-btn:hover {
+    background: #5b86b6;
+}
+
+/* ==========================================================
+   MOBILE CART
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .cart-drawer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cart-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #checkoutOverlay .modal {
+        width: 92%;
+        padding: 22px;
+    }
+
+}
+
+/* FIX PELATIHAN */
+#courseGrid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+.course-card {
+    display: flex !important;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
+}
+
+.course-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-card__body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.course-card__footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.add-cart-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #7ca6cf !important;
+    color: white !important;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    #courseGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #courseGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE CART
+========================================================== */
+
+/* Overlay */
+#cartOverlay {
+
+    align-items: stretch;
+
+}
+
+/* Saat cart dibuka */
+#cartOverlay.is-open {
+    display: flex;
+}
+
+/* ==========================================================
+   CART DRAWER
+========================================================== */
+
+/* Animasi */
+@keyframes cartSlideIn {
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+/* ==========================================================
+   CART HEADER
+========================================================== */
+
+.cart-drawer__head {
+    min-height: 70px;
+
+}
+
+.modal__close {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: transparent;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.modal__close:hover {
+    background: #f1f1f1;
+}
+
+/* ==========================================================
+   CART BODY
+========================================================== */
+
+/* Scrollbar */
+
+/* ==========================================================
+   CART ITEM
+========================================================== */
+
+.cart-item {
+
+    margin-bottom: 12px;
+
+    border: 1px solid #eee;
+    border-radius: 12px;
+
+    background: #fff;
+}
+
+.cart-item__info p {
+
+    font-weight: 600;
+}
+
+/* ==========================================================
+   CART ACTION
+========================================================== */
+
+.cart-item__actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-item__actions span {
+
+    font-weight: 600;
+}
+
+.cart-item__actions .cart-remove {
+    margin-left: auto;
+
+    border: none;
+
+    color: #d9534f;
+}
+
+/* ==========================================================
+   CART EMPTY
+========================================================== */
+
+.cart-empty {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #777;
+}
+
+.cart-empty p {
+    margin: 0 0 5px;
+
+    font-weight: 600;
+}
+
+.cart-empty small {
+    color: #999;
+}
+
+/* ==========================================================
+   CART FOOTER
+========================================================== */
+
+/* ==========================================================
+   CHECKOUT BUTTON
+========================================================== */
+
+/* ==========================================================
+   CART BUTTON NAVBAR
+========================================================== */
+
+#cartToggle {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .cart-drawer {
+        width: 380px;
+    }
+
+    .cart-drawer__head {
+        padding: 14px 16px;
+    }
+
+    .cart-drawer__body {
+        padding: 14px;
+    }
+
+    .cart-drawer__foot {
+        padding: 15px 16px;
+    }
+
+}
+
+/* ==========================================================
+   HP
+========================================================== */
+
+@media (max-width: 480px) {
+
+    #cartOverlay {
+        justify-content: center;
+    }
+
+    .cart-drawer {
+        width: 100%;
+        max-width: 100%;
+
+        height: 100dvh;
+
+        border-radius: 0;
+    }
+
+    .cart-drawer__head {
+        min-height: 60px;
+
+        padding: 12px 15px;
+    }
+
+    .cart-drawer__head h2 {
+        font-size: 18px;
+    }
+
+    .cart-drawer__body {
+        padding: 12px;
+    }
+
+    .cart-item {
+        padding: 10px;
+
+        gap: 10px;
+    }
+
+    .cart-item img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .cart-item__info h3 {
+        font-size: 14px;
+    }
+
+    .cart-item__info p {
+        font-size: 13px;
+    }
+
+    .cart-item__actions button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cart-total {
+        font-size: 15px;
+    }
+
+    .cart-total strong {
+        font-size: 17px;
+    }
+
+    .cart-drawer__foot {
+        padding: 14px;
+    }
+
+}
+
+/* ==========================================================
+   CART DRAWER
+========================================================== */
+
+#cartOverlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(15, 30, 45, 0.42);
+
+    display: none;
+
+    justify-content: flex-end;
+
+    z-index: 99999;
+}
+
+/* ==========================================================
+   DRAWER
+========================================================== */
+
+.cart-drawer {
+    width: 430px;
+    max-width: 100%;
+
+    height: 100dvh;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+
+    animation: cartSlide 0.25s ease;
+}
+
+@keyframes cartSlide {
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+/* ==========================================================
+   HEADER CART
+========================================================== */
+
+.cart-drawer__head {
+
+    height: 72px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+
+    flex-shrink: 0;
+}
+
+.cart-drawer__head h2 {
+
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #16324f;
+}
+
+/* Tombol X */
+
+#closeCart {
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    background: #f7f7f7;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+
+    color: #777;
+
+    transition: 0.2s;
+}
+
+#closeCart:hover {
+
+    background: #eeeeee;
+
+}
+
+/* ==========================================================
+   ISI CART
+========================================================== */
+
+.cart-drawer__body {
+
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding: 18px 24px;
+}
+
+/* scrollbar */
+
+.cart-drawer__body::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+.cart-drawer__body::-webkit-scrollbar-thumb {
+
+    background: #cfcfcf;
+
+    border-radius: 10px;
+
+}
+
+/* ==========================================================
+   ITEM CART
+========================================================== */
+
+.cart-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* gambar */
+
+.cart-item img {
+
+    width: 68px;
+    height: 68px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
+
+}
+
+/* informasi */
+
+.cart-item__info {
+
+    flex: 1;
+
+    min-width: 0;
+
+    position: relative;
+
+    padding-right: 18px;
+}
+
+.cart-item__info h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    color: #243b53;
+}
+
+.cart-item__info p {
+
+    margin: 0 0 9px;
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+/* ==========================================================
+   TOMBOL X ITEM
+========================================================== */
+
+.cart-remove {
+
+    position: absolute;
+
+    top: -2px;
+    right: 0;
+
+    width: 25px;
+    height: 25px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.cart-remove:hover {
+
+    color: #d9534f;
+
+}
+
+/* ==========================================================
+   PLUS MINUS
+========================================================== */
+
+.cart-item__actions button {
+
+    width: 27px;
+    height: 27px;
+
+    border: 1px solid #e3e3e3;
+
+    background: #f8f9fa;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    color: #333;
+
+    padding: 0;
+}
+
+.cart-item__actions button:hover {
+
+    background: #eeeeee;
+
+}
+
+.cart-item__actions span {
+
+    min-width: 15px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #555;
+
+}
+
+/* ==========================================================
+   CART KOSONG
+========================================================== */
+
+.cart-empty i {
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+    color: #aab4bd;
+}
+
+/* ==========================================================
+   FOOTER CART
+========================================================== */
+
+.cart-drawer__foot {
+
+    padding: 20px 24px;
+
+    border-top: 1px solid #eeeeee;
+
+    background: #fff;
+
+    flex-shrink: 0;
+}
+
+.cart-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    font-size: 15px;
+
+    color: #333;
+}
+
+.cart-total strong {
+
+    font-size: 21px;
+
+    color: #162f4d;
+
+}
+
+/* ==========================================================
+   CHECKOUT
+========================================================== */
+
+#checkoutBtn {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #efa92f;
+
+    color: #18324e;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#checkoutBtn:hover {
+
+    transform: translateY(-1px);
+
+    filter: brightness(0.96);
+
+}
+
+/* ==========================================================
+   CART ICON NAVBAR
+========================================================== */
+
+#cartToggle {
+
+    position: relative;
+
+    cursor: pointer;
+
+}
+
+#cartCount {
+
+    position: absolute;
+
+    top: -8px;
+
+    right: -8px;
+
+    min-width: 19px;
+
+    height: 19px;
+
+    padding: 0 4px;
+
+    border-radius: 50%;
+
+    background: #e64b4b;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .cart-drawer {
+
+        width: 390px;
+
+    }
+
+    .cart-drawer__head {
+
+        padding: 0 18px;
+
+    }
+
+    .cart-drawer__body {
+
+        padding: 15px 18px;
+
+    }
+
+    .cart-drawer__foot {
+
+        padding: 16px 18px;
+
+    }
+
+}
+
+/* ==========================================================
+   HP
+========================================================== */
+
+@media (max-width: 480px) {
+
+    #cartOverlay {
+
+        justify-content: stretch;
+
+    }
+
+    .cart-drawer {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 100dvh;
+
+    }
+
+    .cart-drawer__head {
+
+        height: 62px;
+
+        padding: 0 16px;
+
+    }
+
+    .cart-drawer__head h2 {
+
+        font-size: 19px;
+
+    }
+
+    .cart-drawer__body {
+
+        padding: 10px 16px;
+
+    }
+
+    .cart-item {
+
+        gap: 11px;
+
+        padding: 14px 0;
+
+    }
+
+    .cart-item img {
+
+        width: 60px;
+        height: 60px;
+
+    }
+
+    .cart-item__info h3 {
+
+        font-size: 14px;
+
+    }
+
+    .cart-item__info p {
+
+        font-size: 12px;
+
+    }
+
+    .cart-drawer__foot {
+
+        padding: 14px 16px;
+
+    }
+
+    .cart-total strong {
+
+        font-size: 18px;
+
+    }
+
+    #checkoutBtn {
+
+        min-height: 48px;
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* =========================================
+   SIDEBAR RESPONSIF HP - LCC KARADENAN
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Sidebar utama */
+    .navbar-nav {
+        position: fixed;
+        top: 72px;
+        right: -100%;
+        width: min(82%, 320px);
+        height: calc(100dvh - 72px);
+        max-height: calc(100vh - 72px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        padding: 12px 12px 24px;
+        margin: 0;
+        gap: 0;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+
+        background: #8eb3d2;
+        box-sizing: border-box;
+        z-index: 10000;
+
+        transition: right 0.3s ease;
+    }
+
+    /* Sidebar saat dibuka */
+    .navbar-nav.active {
+        right: 0;
+    }
+
+    /* Semua menu tersusun ke bawah */
+    .navbar-nav > li {
+        display: block;
+        position: relative;
+        flex: 0 0 auto;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Tombol dan link menu */
+    .navbar-nav > li > a,
+    .navbar-nav > li > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 55px;
+        padding: 12px 10px;
+        margin: 0;
+
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 1.4;
+        white-space: normal;
+
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+        border-radius: 0;
+        background: transparent;
+
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    /* Dropdown Pages tidak menggeser menu lain */
+    .navbar-nav .dropdown {
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar-nav .dropdown > a,
+    .navbar-nav .dropdown > button {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Daftar submenu Pages */
+    .navbar-nav .dropdown-menu {
+        position: static;
+        display: none;
+
+        width: 100%;
+        max-height: none;
+        height: auto;
+        margin: 0;
+        padding: 0 0 0 12px;
+
+        box-sizing: border-box;
+        overflow: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Tampilkan submenu saat Pages aktif */
+    .navbar-nav .dropdown.active > .dropdown-menu,
+    .navbar-nav .dropdown.open > .dropdown-menu,
+    .navbar-nav .dropdown.show > .dropdown-menu {
+        display: block;
+    }
+
+    /* Link submenu */
+    .navbar-nav .dropdown-menu li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-nav .dropdown-menu a {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+
+        width: 100%;
+        min-height: 46px;
+        padding: 10px 16px;
+
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 16px;
+        text-align: left;
+        white-space: normal;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        background: transparent;
+    }
+
+    /* Keranjang tetap berada dalam susunan sidebar */
+    .navbar-nav .cart,
+    .navbar-nav .cart-container,
+    .navbar-nav .cart-icon {
+        flex: 0 0 auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Scrollbar sidebar */
+    .navbar-nav::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .navbar-nav::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 10px;
+    }
+}

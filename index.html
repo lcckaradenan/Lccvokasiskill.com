@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>LCC Karadenan</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+</head>
+<body>
+
+    <header class="header">
+
+    <div class="logo-container">
+        <img src="lms.jpg/lcc.png" class="logo" alt="Logo LCC">
+        <img src="lms.jpg/lms.jpeg" class="logo2" alt="Logo LMS">
+    </div>
+
+    
+        <nav class="navbar-nav">
+
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#pelatihan">Pelatihan</a>
+        <a href="#gallery">Gallery</a>
+
+        <div class="dropdown">
+
+    <a href="javascript:void(0)">
+
+        Pages
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <div class="dropdown-menu">
+
+        <a href="#profile">About Us</a>
+
+        <a href="#contact">Contact</a>
+
+        <a href="instructors.html">Instructors</a>
+
+    </div>
+
+</div>
+
+        <a href="#register">Register</a>
+        <a href="#account">My Account</a>
+        <a href="#ulasan">Ulasan</a>
+        <button class="cart-toggle"
+        id="cartToggle"
+        type="button"
+        aria-label="Buka keranjang belanja">
+
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span class="cart-count" id="cartCount">0</span>
+
+</button>
+
+    </nav>
+
+    <div id="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+    <img src="lms.jpg/hero.jpeg" alt="Hero LCC">
+
+</section>
+
+<!-- PROFILE -->
+
+<section id="profile" class="sec">
+
+<h2>Profile</h2>
+
+<p>
+
+Melalui Learning Management System (LMS), LCC memberikan kemudahan bagi peserta
+untuk mengakses materi pembelajaran, mengikuti pelatihan secara daring,
+mengerjakan tugas, serta memantau perkembangan belajar kapan saja dan di mana saja.
+Dengan didukung oleh instruktur yang berpengalaman dan metode pembelajaran yang
+interaktif, LCC terus berupaya mencetak lulusan yang kompeten, berdaya saing,
+dan siap menghadapi tantangan dunia kerja.
+
+</p>
+
+<h3>Visi</h3>
+
+<p>
+
+Menjadi Lembaga pelatihan terbaik dan terlengkap , yang sesuai dengan kebutuhan masyarakat, dunia industri dan bisnis dalam mencetak generasi emas , Berkarakter, berdaya saing tinggi, mandiri beriman dan bertaqwa Yang inofatif yang dapat memenuhi harapan masyarakat , Peserta siap kerja.
+
+</p>
+
+<h3>Misi</h3>
+
+
+<ul>
+
+<li>Mencetak sumber daya manusia yang siap kerja, terampil, mandiri, profesional, beriman, bertakwa, dan inovatif sehingga mampu memenuhi harapan masyarakat.</li>
+<li>Menjadi pusat pengembangan riset dan program pelatihan bermutu yang diminati masyarakat serta dunia industri,dengan membangun profesionalisme manajemen lembaga,program kemitraan, dan instruktur yang berkualitas.</li>
+<li>Membentuk sumber daya manusia yang berjiwa wirausaha,berakhlak mulia, beriman, dan bertakwa.</li>
+<li>Membangun jaringan dan kerja sama secara nasional maupun internasional dengan dunia industri, sekolah, perguruan tinggi,serta pemerintah untuk terus meningkatkan kualitas pendidikan sesuai dengan kurikulum dan kebutuhan dunia kerja.</li>
+
+</ul>
+
+</section>
+
+
+<!-- PELATIHAN -->
+
+<section id="pelatihan" class="sec">
+
+    <h2>Pelatihan dan Course</h2>
+
+    <p>
+        Gunakan kolom pencarian untuk menemukan course yang diinginkan.
+        Seluruh materi disusun secara sistematis mulai dari tingkat dasar
+        hingga lanjutan.
+    </p>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Cari Course..."
+        onkeyup="filterCourse()">
+
+    <section class="courses" id="courseList">
+
+        <div class="container">
+
+            <div class="section-head">
+                <p class="eyebrow">Program Kami</p>
+                <h2>Pilih pelatihan yang cocok untukmu</h2>
+            </div>
+
+            <div class="course-grid" id="courseGrid">
+                <!-- kartu pelatihan dirender JavaScript -->
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- DETAIL COURSE -->
+<div id="courseDetail" class="course-detail">
+
+    <div class="course-detail-content">
+
+        <div class="course-image">
+            <img id="detailImage" src="">
+        </div>
+
+        <div class="course-text">
+
+            <h2 id="detailTitle"></h2>
+
+            <h3>Tujuan</h3>
+            <p id="detailTujuan"></p>
+
+            <h3>Manfaat</h3>
+            <p id="detailManfaat"></p>
+
+            <h3>Harga</h3>
+            <p id="detailHarga"></p>
+
+
+            <button class="add-cart-btn" id="detailCart" type="button">
+    <i class="fa-solid fa-cart-plus"></i>
+    Add Cart
+</button>
+
+            <button class="close-detail" onclick="closeCourseDetail()">
+             ✖ Tutup Detail
+            </button>
+            
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!--===== LIGHT-BOX-->
+<div id="lightbox" class="lightbox">
+
+    <span class="close" onclick="closeImage()">&times;</span>
+
+    <img id="lightbox-img">
+
+</div>
+
+
+<!-- GALLERY -->
+
+<section id="gallery" class="sec gallery">
+    
+
+<h2>Gallery Kegiatan</h2>
+
+<p>
+
+Gallery Kegiatan LCC Karadenan menampilkan dokumentasi berbagai aktivitas pelatihan, 
+praktik, seminar, workshop, dan penyerahan sertifikat. Setiap kegiatan mencerminkan komitmen LCC Karadenan dalam 
+memberikan pembelajaran yang berkualitas, interaktif, dan berorientasi pada pengembangan keterampilan peserta agar siap menghadapi dunia kerja.
+
+</p>
+
+<img src="lms.jpg/gl (1).jpeg" alt="Gallery 1">
+
+<img src="lms.jpg/gl (2).jpeg" alt="Gallery 2">
+
+<img src="lms.jpg/gl (3).jpeg" alt="Gallery 3">
+
+<img src="lms.jpg/gl (4).jpeg" alt="Gallery 4">
+
+<img src="lms.jpg/gl (5).jpeg" alt="Gallery 5">
+
+<img src="lms.jpg/gl (6).jpeg" alt="Gallery 6">
+
+<img src="lms.jpg/gl (7).jpeg" alt="Gallery 7">
+
+<img src="lms.jpg/gl (8).jpeg" alt="Gallery 8">
+
+<img src="lms.jpg/gl (9).jpeg" alt="Gallery 9">
+
+
+
+
+</section>
+
+</main>
+
+
+<!-- ================= REGISTER ================= -->
+<section id="register" class="sec">
+
+    <div class="login-box">
+
+        <h2>Register</h2>
+        <p class="login-subtitle">
+            Silakan buat akun terlebih dahulu
+        </p>
+
+        <form id="registerForm">
+
+            <!-- Nama -->
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Nama Lengkap"
+                    pattern="[A-Za-zÀ-ÿ\s]+"
+                    oninput="this.value=this.value.replace(/[^A-Za-zÀ-ÿ\s]/g,'')"
+                    required>
+            </div>
+
+            <!-- Email -->
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required>
+            </div>
+
+            <!-- Nomor HP -->
+            <div class="input-box">
+                <i class="fa-solid fa-phone"></i>
+                <input
+                    type="tel"
+                    id="telepon"
+                    placeholder="Nomor HP"
+                    inputmode="numeric"
+                    pattern="[0-9]+"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                    required>
+            </div>
+
+            
+<!-- Password -->
+<div class="input-box password-box">
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        value="1234"
+        required
+    >
+
+    <i
+        class="fa-solid fa-eye toggle-password"
+        id="togglePassword"
+        style="cursor: pointer;"
+        title="Lihat password"
+    ></i>
+</div>
+
+
+            <button type="submit" class="login-btn">
+                Daftar
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ACCOUNT ================= -->
+<section id="account" class="sec">
+
+    <div class="account-card">
+<h2>My Account</h2>
+
+<p><b>ID Registrasi :</b> <span id="idAkun"></span></p>
+
+<p><b>Name :</b> <span id="namaAkun"></span></p>
+
+<p><b>Gmail :</b> <span id="emailAkun"></span></p>
+
+<p><b>Tanggal Daftar :</b> <span id="tanggal"></span></p>
+
+<button onclick="resetAccount()">Reset My Account</button>
+
+    </div>
+
+</section>
+
+<!-- ================= TESTIMONI ================= -->
+<section id="ulasan" class="testimonial-section">
+
+    <h2>Ulasan Peserta LCC Karadenan</h2>
+    <p class="subtitle">Apa kata peserta tentang pelatihan di LCC Karadenan?</p>
+
+    <div id="testimonialContainer" class="testimonial-grid">
+
+        <!-- 1 -->
+        <div class="testimonial-card">
+            
+            <img src="lms.jpg/murid (1).jpeg" alt="Peserta">
+            <h3>Fauzan</h3>
+            <span>Siswi SMK</span>
+            
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Belajar di LCC seru banget! Materinya gampang dipahami dan instrukturnya super sabar. Sekarang saya jauh lebih siap dan percaya diri buat masuk ke dunia kerja!"
+            </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="testimonial-card">
+            <img src="lms.jpg/murid (2).jpeg" alt="Peserta">
+            <h3>Annisa</h3>
+            <span>Mahasiswa</span>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Kemampuan Bahasa Inggris saya meningkat drastis sejak belajar di LCC! Kelasnya nyaman, pengucapannya diajarkan dengan benar, dan sekarang saya jadi berani bicara Bahasa Inggris!"
+            </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="testimonial-card">
+            <img src="lms.jpg/murid (3).jpeg" alt="Peserta">
+            <h3>Queen</h3>
+            <span>Siswi SMP</span>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Cari tempat kursus yang fasilitasnya lengkap, instrukturnya ramah, dan materinya langsung praktik? LCC jawabannya! Sukses meraih cita-cita bersama LCC."
+            </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="testimonial-card">
+            <img src="lms.jpg/murid (4).jpeg" alt="Peserta">
+            <h3>Maudy</h3>
+            <span>Peserta Bootcamp</span>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "LCC bantu saya banget buat menguasai Microsoft Word, Excel, hingga aplikasi perkantoran lainnya. Fasilitasnya lengkap dan materinya sangat bermanfaat untuk masa depan!"
+            </p>
+        </div>
+
+        <!-- 5 -->
+        <div class="testimonial-card">
+            <img src="lms.jpg/murid (5).jpeg" alt="Peserta">
+            <h3>Nayla</h3>
+            <span>Peserta Digital Marketing</span>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Selama belajar di LCC, kemampuan Bahasa Inggris saya meningkat drastis! Instrukturnya super sabar mengajarkan cara bicara dan pengucapan yang benar. Suasana kelasnya juga nyaman banget, bikin saya jadi makin berani dan percaya diri buat ngomong Bahasa Inggris sehari-hari!"
+            </p>
+        </div>
+
+        <!-- 6 -->
+        <div class="testimonial-card">
+            <img src="lms.jpg/murid (6).jpeg" alt="Peserta">
+            <h3>Putri</h3>
+            <span>Peserta General English</span>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Belajar di LCC seru dan bermanfaat banget! Saya jadi lancar mengoperasikan Microsoft Word, Excel, hingga aplikasi perkantoran untuk buat laporan. Fasilitasnya lengkap, banyak praktiknya, dan materinya sangat membantu mempersiapkan diri saya untuk masuk ke dunia kerja!"
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer id="contact">
+
+<p>
+
+Platform pembelajaran digital yang menyediakan berbagai course
+berkualitas untuk meningkatkan kompetensi di bidang teknologi,
+bisnis, dan pendidikan.
+
+</p>
+
+
+<div class="contact-box">
+    <table class="contact-table">
+
+        <tr>
+            <td><i class="fa-solid fa-envelope"></i> Email</td>
+            <td>:</td>
+            <td>lcckaradenan@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-brands fa-whatsapp"></i> WhatsApp</td>
+            <td>:</td>
+            <td>+62 818-949-099</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-brands fa-instagram"></i> Instagram</td>
+            <td>:</td>
+            <td>@lcccibinong_</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-brands fa-tiktok"></i> TikTok</td>
+            <td>:</td>
+            <td>@lcckaradenan</td>
+        </tr>
+
+    </table>
+</div>
+
+
+<p>
+© <span id="year"></span> LCC Karadenan | All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- ================= CART ================= -->
+
+<div class="overlay" id="cartOverlay">
+
+    <aside class="cart-drawer"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="cartTitle">
+
+        <div class="cart-drawer__head">
+
+            <h2 id="cartTitle">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Keranjang Kamu
+            </h2>
+
+            <button
+                class="modal__close"
+                id="closeCart"
+                type="button"
+                aria-label="Tutup keranjang">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-drawer__body"
+            id="cartItems">
+
+            <!-- Isi cart dibuat oleh JavaScript -->
+
+        </div>
+
+
+        <div class="cart-drawer__foot">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    Rp 0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="btn btn--primary btn--block btn--lg"
+                id="checkoutBtn"
+                type="button">
+
+                <i class="fa-solid fa-credit-card"></i>
+                Checkout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<div
+    class="overlay"
+    id="checkoutOverlay">
+
+    <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="checkoutTitle">
+
+
+        <button
+            class="modal__close"
+            id="closeCheckout"
+            type="button"
+            aria-label="Tutup checkout">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <h2
+            id="checkoutTitle"
+            class="modal__title">
+
+            Selesaikan Pendaftaran
+
+        </h2>
+
+
+        <form id="checkoutForm">
+
+            <label>
+                Nama penerima
+
+                <input
+                    type="text"
+                    name="fullname"
+                    required
+                    placeholder="Nama lengkap">
+            </label>
+
+
+            <label>
+                Alamat
+
+                <input
+                    type="text"
+                    name="address"
+                    required
+                    placeholder="Alamat lengkap">
+            </label>
+
+
+            <label>
+                Metode pembayaran
+
+                <select
+                    name="payment"
+                    required>
+
+                    <option value="">
+                        Pilih metode
+                    </option>
+
+                    <option value="transfer">
+                        Transfer Bank
+                    </option>
+
+                    <option value="cod">
+                        Bayar di Tempat
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <div
+                class="checkout-summary"
+                id="checkoutSummary">
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn--primary btn--block btn--lg">
+
+                <i class="fa-solid fa-check"></i>
+                Bayar &amp; Daftar
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="pelatihan.js"></script>
+<script src="script.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>LCC Karadenan</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<head>
+
+</head>
+<body>
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7fb;
+}
+
+/* Header */
+
+header{
+    background:#0c5da5;
+    color:white;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+header h2{
+    margin:0;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+    background:#1e88e5;
+    padding:10px 18px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#db1212;
+}
+
+/* Judul */
+
+.title{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.title h1{
+    color:#0c5da5;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#666;
+}
+
+/* Grid */
+
+.instructor-container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    padding-bottom:60px;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.18);
+}
+
+.card img{
+
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.card h3{
+
+    text-align:center;
+
+    padding:18px;
+
+    color:#0c5da5;
+
+    margin-bottom:8px;
+}
+
+.card p{
+    text-align:center;
+    color:#666;
+    font-size:15px;
+    margin-top:-8px;
+    margin-bottom:20px;
+    font-weight:500;
+}
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.instructor-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.instructor-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+footer{
+
+    background:#0c5da5;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="lms.jpg/lcc.png" class="logo" alt="Logo LMS">
+         <img src="lms.jpg/lms.jpeg" class="logo2" alt="Logo LCC">
+    </div>
+
+<a href="index.html#home" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    Kembali
+</a>
+
+</header>
+
+<section class="title">
+
+<h1>Tim Instruktur Profesional</h1>
+
+<p>
+Berikut adalah instruktur yang mengajar di LCC Karadenan.
+</p>
+
+</section>
+
+<div class="instructor-container">
+
+<div class="card">
+<img src="lms.jpg/ins (6).jpeg" alt="Ins1">
+<h3>Shinta Rosita R, S.E., M.M.</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (1).jpeg" alt="Ins2">
+<h3>Anis Rohmadi, S.Kom., M.Kom</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (9).jpeg" alt="Ins3">
+<h3>Tri Sedjati, S.E.</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (5).jpeg" alt="Ins4">
+<h3>Nugroho, S.Pd.</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (8).jpeg" alt="Ins5">
+<h3>Supadil, S.Kom., M.Kom.</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (7).jpeg" alt="Ins6">
+<h3>Siva, S.M.</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (4).jpeg" alt="Ins7">
+<h3> Khoirul, S.Pd., M.M</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (2).jpeg" alt="Ins8">
+<h3>Sugata, S.Th., M.M., M.Ag., MOS</h3>
+
+</div>
+
+<div class="card">
+<img src="lms.jpg/ins (3).jpeg" alt="Ins9">
+<h3>Khazim, S.TP</h3>
+
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 LCC Karadenan | All Rights Reserved
+
+</footer>
+
+</body>
+</html>
